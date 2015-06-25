@@ -9,7 +9,7 @@
             controller: "PeopleController",
             controllerAs: 'c'
         }).when('/orders', {
-                templateUrl: 'views/orders.html',
+                templateUrl: 'views/orders.html'
                 //controller: "OrdersController",
                // controllerAs: 'o'
         });
