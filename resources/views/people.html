@@ -1,0 +1,29 @@
+<section>
+    <div >
+        Name:  <input type="text" ng-model="c.searchText.name">{{c.searchText.name}}</input>
+        <ul>
+            <li ng-repeat="p in c.people | filter: c.searchText | orderBy: 'name'  ">
+                {{::p.name}} {{::p.city}}
+            </li>
+
+        </ul>
+        <dl>
+            <dt>Filter</dt>
+            <dd>lowercase usage</dd>
+        </dl>
+        <ul>
+            <li ng-repeat="p in c.people ">
+                <a href="#/orders">{{::p.name}} {{::p.city | lowercase}}</a>
+            </li>
+
+        </ul>
+    </div>
+    <dl>
+        <dt>:: Usage</dt>
+        <dd>One time binding , not watched later</dd>
+    </dl>
+    <dl>
+        <dt>Filter</dt>
+        <dd>Pipes</dd>
+    </dl>
+</section>
